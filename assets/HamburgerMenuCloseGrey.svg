@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #5b5f63;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="39" y="43" width="122" height="121" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="39" y="44" width="122" height="121" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="アートボード_1" data-name="アートボード 1">
+    <path id="長方形_1" data-name="長方形 1" class="cls-1" d="M47.347,135.645l87.586-87.586a5,5,0,0,1,7.071,0l9.775,9.775a5,5,0,0,1,0,7.071L64.193,152.491a5,5,0,0,1-7.071,0l-9.775-9.775A5,5,0,0,1,47.347,135.645Z"/>
+    <path id="長方形_1-2" data-name="長方形 1" class="cls-2" d="M64.061,48.5l87.586,87.586a5,5,0,0,1,0,7.071l-9.774,9.775a5,5,0,0,1-7.071,0L47.215,65.348a5,5,0,0,1,0-7.071L56.99,48.5A5,5,0,0,1,64.061,48.5Z"/>
+  </g>
+</svg>

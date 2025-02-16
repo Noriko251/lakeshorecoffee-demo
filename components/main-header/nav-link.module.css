@@ -1,0 +1,15 @@
+.active {
+    color: #16009d;
+    font-weight: bold;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+    @media only screen and (max-width: 480px) {
+        .link {
+            width: calc(100vw - 110px);
+            height: 100%;
+        }
+    }

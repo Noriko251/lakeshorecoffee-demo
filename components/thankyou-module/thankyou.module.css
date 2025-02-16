@@ -1,0 +1,28 @@
+.thanks {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    padding: 1rem;
+    width: 80%;
+    max-width: 40rem;
+    border-radius: 6px;
+    border: none;
+}
+
+.thanks h2 {
+    margin: 1rem 0;
+}
+
+.thanksContainer {
+    margin: 20px 20px;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.thanks::backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
+  }

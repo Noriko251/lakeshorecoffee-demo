@@ -1,95 +1,102 @@
+import classes from "./page.module.css";
+// 
+import Link from 'next/link';
 import Image from "next/image";
-import styles from "./page.module.css";
+
+import bigLogoImg from '@/assets/LakeshoreCoffeeLogo.png';
+import arrowImg from '@/assets/Arrow.png';
+import ImageSlideshow from "@/components/image-slideshow/image-slideshow";
+import CoffeeImg from '@/assets/Coffee.jpeg'
+import FoodImg from '@/assets/CinnamonRolls.jpeg'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main className={classes.main}>
+      <div className={classes.logoContainer}>
+          <div className={classes.mainLogo}>
+            <Image className={classes.logoImg} src={bigLogoImg} alt="Lakeshore Coffee big logo" />
+          </div>
+          <div className={classes.mainLinks}>
+            <Link className={classes.link} href="/menu">Our Menu
+              <Image className={classes.arrowImg} src={arrowImg} alt="Menu Arrow" />
+            </Link>
+            <Link className={classes.link} href="/shop">Online Store
+              <Image className={classes.arrowImg} src={arrowImg} alt="Menu Arrow" />
+            </Link>
+          </div>
+      </div>
+      <div className={classes.slideshowContainer}>
+        <ImageSlideshow />
+      </div>
+      <div className={classes.drinkMenu}>
+        <Image className={classes.coffeeImg} src={CoffeeImg} alt="Coffee image"/>
+        <div className={classes.drinkMenuWrapper}>
+            <div className={classes.columnHeader}>
+                <p className={classes.columnHeaderDrink}>Drink</p>
+            </div>
+            <hr className={classes.hr}/>
+            <div className={classes.menuList}>
+                <ul>
+                    <li>
+                        <p className={classes.manuName}>Today&apos;s Coffee</p>
+                        <p>$2.80</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Cappuccino</p>
+                        <p>$4.50</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Latte</p>
+                        <p>$4.80</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Decaf Coffee</p>
+                        <p>$3.00</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Hot Chocolate</p>
+                        <p>$4.00</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Earl Grey Tea</p>
+                        <p>$3.50</p>
+                    </li><li>
+                        <p className={classes.manuName}>Rosehip Tea</p>
+                        <p>$4.00</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className={classes.foodMenu}>
+        <div className={classes.foodMenuWrapper}>
+            <div className={classes.columnHeader}>
+                <p className={classes.columnHeaderFood}>Food</p>
+            </div>
+            <hr className={classes.hr}/>
+            <div className={classes.menuList}>
+                <ul>
+                    <li>
+                        <p className={classes.manuName}>Cinnamon Roll</p>
+                        <p>$3.80</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Banana Bread</p>
+                        <p>$2.80</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Today&apos;s Muffin</p>
+                        <p>$3.50</p>
+                    </li>
+                    <li>
+                        <p className={classes.manuName}>Today&apos;s Cookie</p>
+                        <p>$2.80</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <Image className={classes.foodImg} src={FoodImg} alt="Food image"/>
+      </div>
+    </main>
   );
 }

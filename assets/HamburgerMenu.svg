@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #16009d;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+    </style>
+    <filter id="filter" x="27" y="28" width="148" height="38" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="26" y="85" width="148" height="37" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="26" y="141" width="148" height="38" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="アートボード_1" data-name="アートボード 1">
+    <path id="長方形_1" data-name="長方形 1" class="cls-1" d="M38.635,31.366H162.5a5,5,0,0,1,5,5V50.189a5,5,0,0,1-5,5H38.635a5,5,0,0,1-5-5V36.366A5,5,0,0,1,38.635,31.366Z"/>
+    <path id="長方形_1-2" data-name="長方形 1" class="cls-2" d="M37.5,88.088H161.366a5,5,0,0,1,5,5v13.824a5,5,0,0,1-5,5H37.5a5,5,0,0,1-5-5V93.088A5,5,0,0,1,37.5,88.088Z"/>
+    <path id="長方形_1-3" data-name="長方形 1" class="cls-3" d="M37.5,144.811H161.366a5,5,0,0,1,5,5v13.823a5,5,0,0,1-5,5H37.5a5,5,0,0,1-5-5V149.811A5,5,0,0,1,37.5,144.811Z"/>
+  </g>
+</svg>

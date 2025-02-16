@@ -1,0 +1,7 @@
+.modal {
+  color: #5b5f63;
+}
+
+.modal::backdrop {
+    background-color: rgba(100, 100, 100, 0.75);
+  }

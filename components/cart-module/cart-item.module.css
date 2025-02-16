@@ -1,0 +1,134 @@
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+    @media screen and (max-width: 480px) {
+        .cartItem {
+            margin: 1rem 0;
+        }
+    }
+
+.cartItemWrapper {
+    display: flex;
+}
+
+.itemImage {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+}
+    @media screen and (max-width: 960px) {
+        .itemImage {
+            width: 75px;
+            height: 75px;
+            margin-right: 0.5rem;
+        }
+    }
+
+.itemDetailActionsWrapper {
+    display: flex;
+}
+@media screen and (max-width: 480px) {
+    .itemDetailActionsWrapper {
+        display: grid;
+    }
+}
+
+.itemDetail {
+    display: grid;
+    justify-content: left;
+}
+    @media screen and (max-width: 480px) {
+        .itemDetail {
+            margin-bottom: 10px;
+        }
+    }
+
+.name{
+    width: 15rem;
+}
+    @media screen and (max-width: 540px) {
+        .name {
+            width: 10rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .name {
+            width: 9.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+.cartItemActions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+    @media screen and (max-width: 480px) {
+        .cartItemActions {
+            justify-content: space-between;
+        }
+    }
+
+.quantityActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.counterButton {
+    cursor: pointer;
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #00E0ED;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartItemActions span{
+    width: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.trashButton {
+    border: none;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.trash {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+}
+
+.subtotal {
+    width: 7.5rem;
+    text-align: end;
+}
+    @media screen and (max-width: 540px) {
+        .subtotal {
+            width: 6rem;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .subtotal {
+            width: 5rem;
+        }
+    }
