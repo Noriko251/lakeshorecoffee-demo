@@ -1,11 +1,34 @@
-import Link from "next/link";
+'use client'
+
 import classes from './page.module.css';
 import ShopItemsGrid from "@/components/shop-items-grid/shop-items-grid";
-import { getItems } from '@/lib/items';
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
-async function Items() {
-    const items = await getItems();
+function Items() {
+    const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch('/api/store-item-route');
+            if(!response.ok) throw new Error("Failed to fetch items.");
+            const data = await response.json();
+            setItems(data);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setIsLoading(false);
+        }
+
+      };
+      
+      useEffect(() => {
+        fetchData();
+      }, []);
+
+      if (isLoading) return <p className={classes.loading}>Fetching items...</p>;
+      if (error) return <p className={classes.error}>Error: {error}</p>;
 
     return <ShopItemsGrid items={items} />
 }

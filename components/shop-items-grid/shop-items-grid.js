@@ -6,7 +6,7 @@ export default function ShopItemsGrid({ items }) {
     return (
         <ul className={classes.items}>
             {items.map((item) => (
-                <li className={classes.li} key={item.id}>
+                <li className={classes.li} key={item._id}>
                     <ShopItem item={item} />
                 </li>
             ))}

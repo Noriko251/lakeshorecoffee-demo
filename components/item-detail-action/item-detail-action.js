@@ -3,7 +3,7 @@
 import CartContext from "@/src/store/CartContext";
 import { useContext, useState } from "react";
 import Button from "../UI/button";
-import classes from "./item-detail-action.module.css"
+import classes from "./item-detail-action.module.css";
 import Link from "next/link";
 
 export default function ItemDetailAction ({item}) {

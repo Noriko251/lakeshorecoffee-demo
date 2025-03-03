@@ -34,7 +34,7 @@ export default function CartModule() {
             <ul>
                 {cartCtx.items.map((item) => (
                 <CartItem 
-                    key={item.id}
+                    key={item._id}
                     image={item.image}
                     name={item.name} 
                     quantity={item.quantity} 
@@ -47,7 +47,6 @@ export default function CartModule() {
                 />
                 ))}
             </ul>
-            {/* <p>{cartCtx.items.slug}</p> */}
             <p className={classes.cartTotal}>Total: {currencyFormatter.format(cartTotal)}</p>
             <p className={classes.modalActions}>
                 <Button textOnly onClick={handleCloseCart}>Close</Button>

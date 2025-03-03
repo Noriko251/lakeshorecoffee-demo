@@ -46,34 +46,33 @@ export default function Contact() {
             ) {
                 throw new Error('Invalid input');
             }
-            else {
-                router.replace('/shop');
-            }
     }
-
-        try {
-            redirectCheck();
-            
-            const response =  await fetch('/api/route', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    contactData: {
-                        message: contactData
-                    }
-                })
-            });
-            
-            if (!response.ok) {
-                throw new Error('Failed to submit message');
-            }
-            handleShowResponse();
-        } catch (error) {
-            console.error(error); 
-        } 
-    };
+            try {
+                redirectCheck();
+                
+                const response =  await fetch('/api/route', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({contactData: {
+                        contact: contactData
+                    }   
+                    }),
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Success:', result);
+                } else {
+                    throw new Error('Failed to submit message');
+                }
+                handleShowResponse();
+                router.replace('/shop');
+            } catch (error) {
+                console.error(error); 
+            } 
+        };
 
     return(
             <form onSubmit={handleSubmit}>
@@ -86,7 +85,7 @@ export default function Contact() {
                     <Input  className={classes.input} placeholder="Subject" type="text" id="subject" />
                     <div>
                         <Input  className={classes.input} placeholder="Phone Number" type="tel" id="phoneNumber" />
-                        <textarea name="message" className={classes.textarea} placeholder="Message" type="text" id="message" />
+                        <textarea name="message" className={classes.textarea} placeholder="Message" id="message" />
                     </div>
                 </div>
                 

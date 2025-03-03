@@ -3,7 +3,6 @@ import { currencyFormatter } from '@/src/util/formatting';
 import Image from 'next/image';
 import trashImg from '@/assets/Trash.png';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function CartItem({ 
     image,

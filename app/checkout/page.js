@@ -67,14 +67,16 @@ export default function Checkout() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    orderData: {
+                body: JSON.stringify({orderData: {
                         items: cartCtx.items,
                         customer: customerData
                     }
                 })
             });
-            
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Success:', result);
+            }
             if (!response.ok) {
                 throw new Error('Failed to submit order');
             }
@@ -100,7 +102,7 @@ export default function Checkout() {
                     <ul>
                         {cartCtx.items.map((item) => (
                         
-                        <li key={item.id} >
+                        <li key={item._id} >
                             <div className={classes.item}>
                                 <Image className={classes.itemImage} 
                                     src={item.image} alt={item.name} 
@@ -138,7 +140,7 @@ export default function Checkout() {
                                 src={Arrow} alt='Back to cart'
                                 width={40} height={40}/>
                         <Button type="button" textOnly className={classes.backToCartButton}>
-                            Return to cart
+                            Return to Cart
                         </Button>
                     </Link>
                     <Button disabled={isSubmitting} >

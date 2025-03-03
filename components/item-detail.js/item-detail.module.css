@@ -1,0 +1,92 @@
+.itemDetail{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+    @media only screen and (max-width: 480px) {
+        .itemDetail {
+            margin: 20px auto;
+            display: grid;
+        }
+    }
+.itemImageWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 3rem;
+}
+    @media screen and (max-width: 960px) {
+        .itemImageWrapper {
+            margin: 0 0 0 2rem;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .itemImageWrapper {
+            margin: 0 auto;
+        }
+    }
+
+@media screen and (max-width: 960px) {
+    .itemImage {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .itemImage {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.itemInfo {
+    margin: 0 50px;
+}
+    @media only screen and (max-width: 960px) {
+        .itemInfo {
+            margin: 0 2rem 0 1rem;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        .itemInfo {
+            margin: 20px 40px;
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+        .itemInfo h1 {
+            font-size: 20px;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        .itemInfo h1 {
+            font-size: 20px;
+            
+        }
+    }
+
+.price {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.description {
+    margin: 20px 0;
+}
+
+.backToShop {
+    margin: 30px 38px;
+    display: flex;
+    align-items: center;
+}
+    @media only screen and (max-width: 960px) {
+        .backToShop {
+            margin: 30px 13px;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        .backToShop {
+            margin: 30px 28px;
+        }
+    }
+
