@@ -30,7 +30,7 @@ export default function ItemDetailFetchData() {
         fetchData();
       }, []);
 
-      if (isLoading) return <p className={classes.loading}>Fetching items...</p>;
+      if (isLoading) return <p className={classes.loading}>loading...</p>;
       if (error) return <p className={classes.error}>Error: {error}</p>;
 
     return <ItemDetail item={item} />

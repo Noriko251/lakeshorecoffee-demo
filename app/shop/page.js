@@ -2,7 +2,7 @@
 
 import classes from './page.module.css';
 import ShopItemsGrid from "@/components/shop-items-grid/shop-items-grid";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Items() {
     const [items, setItems] = useState([]);
@@ -43,9 +43,7 @@ export default function ShopPage() {
                 <h2>Online Store</h2>
             </header>
             <main className={classes.main}>
-                <Suspense fallback={<p className={classes.loading}>Fetching items...</p>}>
                     <Items />
-                </Suspense>
             </main>
         </>
     )
